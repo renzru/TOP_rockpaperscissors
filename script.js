@@ -5,33 +5,7 @@ function playRound() {
     var playerChoice = getPlayerChoice();
     var computerChoice = getComputerChoice();
 
-    if (playerChoice == computerChoice){
-        console.log(`It's a tie! Both played ${playerChoice}`);
-        return;
-    }
-
-    if (playerChoice == "Rock"){
-        if (computerChoice == "Scissors") {
-            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
-            return;
-        }
-    }
-
-    else if (playerChoice == "Paper"){
-        if (computerChoice == "Rock") {
-            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
-            return;
-        }
-    }
-
-    else if (playerChoice == "Scissors"){
-        if (computerChoice == "Paper") {
-            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
-            return;
-        }
-    }
-    
-        console.log(`Player Loses! ${computerChoice} beats ${playerChoice}`);
+    check(playerChoice, computerChoice);
 }
 
 function getPlayerChoice() {
@@ -44,4 +18,35 @@ function getComputerChoice() {
     var moveRandom = Math.floor(Math.random()*moveArray.length);
 
     return moveArray[moveRandom];
+}
+
+function check(move1, move2) {
+
+    if (move1 == move2){
+        console.log(`It's a tie! Both played ${move1}`);
+        return;
+    }
+
+    if (move1 == "Rock"){
+        if (computerChoice == "Scissors") {
+            console.log(`Player Wins! ${move1} beats ${move2}`);
+            return;
+        }
+    }
+
+    else if (move1 == "Paper"){
+        if (move2 == "Rock") {
+            console.log(`Player Wins! ${move1} beats ${move2}`);
+            return;
+        }
+    }
+
+    else if (move1 == "Scissors"){
+        if (move2 == "Paper") {
+            console.log(`Player Wins! ${move1} beats ${move2}`);
+            return;
+        }
+    }
+    
+        console.log(`Player Loses! ${move2} beats ${move1}`);
 }
