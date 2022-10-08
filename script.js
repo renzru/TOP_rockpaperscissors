@@ -5,32 +5,33 @@ function playRound() {
     var playerChoice = getPlayerChoice();
     var computerChoice = getComputerChoice();
 
-    var playerNum = getNumChoice(playerChoice);
-    var computerNum = getNumChoice(computerChoice);
-
-    if (playerNum == computerNum){
-        console.log(`It's a tie! Both players picked ${playerChoice}`);
-    } 
-
-    else if (playerNum == 3 && computerNum == 1) {  // checks if player chose scissors and computer chose rock
-        console.log(`Player Loses! ${computerChoice} beats ${playerChoice}`);
+    if (playerChoice == computerChoice){
+        console.log(`It's a tie! Both played ${playerChoice}`);
+        return;
     }
 
-    else if (playerNum == 1 && computerNum == 3) {  // checks if player chose rock and computer chose scissors
-        console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
+    if (playerChoice == "Rock"){
+        if (computerChoice == "Scissors") {
+            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
+            return;
+        }
     }
 
-    else if (playerNum > computerNum){
-        console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
-    } 
+    else if (playerChoice == "Paper"){
+        if (computerChoice == "Rock") {
+            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
+            return;
+        }
+    }
+
+    else if (playerChoice == "Scissors"){
+        if (computerChoice == "Paper") {
+            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
+            return;
+        }
+    }
     
-    else if (playerNum < computerNum) {
         console.log(`Player Loses! ${computerChoice} beats ${playerChoice}`);
-    }
-    
-    else {
-        alert("Invalid!");
-    }
 }
 
 function getPlayerChoice() {
@@ -44,21 +45,3 @@ function getComputerChoice() {
 
     return moveArray[moveRandom];
 }
-
-function getNumChoice(choice) {
-    switch (choice) {
-        case "Rock":
-        choice = 1;
-        break;
-
-        case "Paper":
-        choice = 2;
-        break;
-
-        case "Scissors":
-        choice = 3;
-        break;
-    }
-
-        return choice;
-} 
