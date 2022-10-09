@@ -1,7 +1,4 @@
-playRound();
-
-function playRound() {
-
+for (let i = 0; i < 5; i++){
     var playerChoice = getPlayerChoice();
     var computerChoice = getComputerChoice();
 
