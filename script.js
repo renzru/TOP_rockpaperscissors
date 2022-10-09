@@ -7,13 +7,14 @@ for (let i = 0; i < 5; i++){
     playerChoice = getPlayerChoice();
     computerChoice = getComputerChoice();
 
-    check();
+    checkScore();
 }
 
 checkWinner();
 
 function getPlayerChoice() {
     let playerMove = prompt("Rock, Paper, or Scissors?").toLowerCase().trim();
+    
     return playerMove[0].toUpperCase() + playerMove.slice(1);   
 }
 
@@ -24,7 +25,7 @@ function getComputerChoice() {
     return moveArray[moveRandom];
 }
 
-function check() {
+function checkScore() {
 
     if (playerChoice == computerChoice){
         console.log(`It's a tie! Both played ${playerChoice}`);
