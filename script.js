@@ -1,9 +1,16 @@
-for (let i = 0; i < 5; i++){
-    var playerChoice = getPlayerChoice();
-    var computerChoice = getComputerChoice();
+var playerScore = 0;
+var computerScore = 0;
+var playerChoice;
+var computerChoice;
 
-    check(playerChoice, computerChoice);
+for (let i = 0; i < 5; i++){
+    playerChoice = getPlayerChoice();
+    computerChoice = getComputerChoice();
+
+    check();
 }
+
+checkWinner();
 
 function getPlayerChoice() {
     var playerChoice = prompt("Rock, Paper, or Scissors?");
@@ -17,33 +24,54 @@ function getComputerChoice() {
     return moveArray[moveRandom];
 }
 
-function check(move1, move2) {
+function check() {
 
-    if (move1 == move2){
-        console.log(`It's a tie! Both played ${move1}`);
+    if (playerChoice == computerChoice){
+        console.log(`It's a tie! Both played ${playerChoice}`);
+        playerScore++;
+        computerScore++;
         return;
     }
 
-    if (move1 == "Rock"){
+    if (playerChoice == "Rock"){
         if (computerChoice == "Scissors") {
-            console.log(`Player Wins! ${move1} beats ${move2}`);
+            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
+            playerScore++;
             return;
         }
     }
 
-    else if (move1 == "Paper"){
-        if (move2 == "Rock") {
-            console.log(`Player Wins! ${move1} beats ${move2}`);
+    else if (playerChoice == "Paper"){
+        if (computerChoice == "Rock") {
+            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
+            playerScore++;
             return;
         }
     }
 
-    else if (move1 == "Scissors"){
-        if (move2 == "Paper") {
-            console.log(`Player Wins! ${move1} beats ${move2}`);
+    else if (playerChoice == "Scissors"){
+        if (computerChoice == "Paper") {
+            console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
+            playerScore++;
             return;
         }
     }
     
-        console.log(`Player Loses! ${move2} beats ${move1}`);
+        console.log(`Player Loses! ${computerChoice} beats ${playerChoice}`);
+        computerScore++;
+}
+
+function checkWinner() {
+    
+    if (playerScore == computerScore) {
+        console.log(`Tie with ${playerScore} points!`);
+    }
+
+    else if (playerScore > computerScore) {
+        console.log(`Player wins with ${playerScore} points!`);
+    }
+
+    else {
+        console.log(`Computer wins with ${computerScore} points!`);
+    }
 }
