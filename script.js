@@ -13,13 +13,13 @@ for (let i = 0; i < 5; i++){
 checkWinner();
 
 function getPlayerChoice() {
-    var playerChoice = prompt("Rock, Paper, or Scissors?");
-    return playerChoice;
+    let playerMove = prompt("Rock, Paper, or Scissors?").toLowerCase().trim();
+    return playerMove[0].toUpperCase() + playerMove.slice(1);   
 }
 
 function getComputerChoice() {
-    var moveArray = ["Rock", "Paper", "Scissors"];
-    var moveRandom = Math.floor(Math.random()*moveArray.length);
+    let moveArray = ["Rock", "Paper", "Scissors"];
+    let moveRandom = Math.floor(Math.random()*moveArray.length);
 
     return moveArray[moveRandom];
 }
@@ -56,7 +56,6 @@ function check() {
             return;
         }
     }
-    
         console.log(`Player Loses! ${computerChoice} beats ${playerChoice}`);
         computerScore++;
 }
@@ -68,10 +67,10 @@ function checkWinner() {
     }
 
     else if (playerScore > computerScore) {
-        console.log(`Player wins with ${playerScore} points!`);
+        console.log(`Player wins with ${playerScore} points! Computer loses with ${computerScore} points!`);
     }
 
     else {
-        console.log(`Computer wins with ${computerScore} points!`);
+        console.log(`Computer wins with ${computerScore} points! Player loses with ${playerScore} points!`);
     }
 }
