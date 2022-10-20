@@ -6,7 +6,7 @@
 }
 
 #header-container {
-    padding: 2.5em;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,11 +15,21 @@
     color: white;
 }
 
+.header-text {
+    transition: .2s ease-in-out 0s;
+}
+
+.header-text:hover {
+    transform: scale(1.5);
+    padding: 0 1.5em;
+}
+
 #rules-container {
     padding: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2.5em;
     background-color: #303030;
     color: white;
 }
@@ -33,9 +43,34 @@
     font-size: 0.45em;
 }
 
-#rules-container img {
-    width: 25%
+.rules-card img {
+    width: 15%;
+    animation: rotation 2s infinite linear;
 }
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  /*
+.rules-card img, .rules-card h1 {
+    transition: .2s ease-in-out 0s;
+}
+
+.rules-card:hover img {
+    transform: scale(2.5);
+    padding: 2.5em 0;
+}
+
+.rules-card:hover h1 {
+    padding-top: 2.5em;
+}
+*/
 
 #body-container {
     padding: 5em;
@@ -47,16 +82,16 @@
 }
 
 #body-container button {
-    height: 15em;
+    width: 35em;
+    height: 35em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
     gap: 1.5em;
     color: white;
     background-color: #303030 ;
-    border-radius: 35%;
+    border-radius: 20em;
     border: none;
 }
 
@@ -65,5 +100,6 @@ button h1 {
 }
 
 button img {
-    width: 45%;
+    width: 15em;
 }
+

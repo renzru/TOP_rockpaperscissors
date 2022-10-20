@@ -1,3 +1,22 @@
+// Interface Code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Code for Rock Paper Scissors
+
+
 var playerScore = 0;
 var computerScore = 0;
 var playerChoice;
