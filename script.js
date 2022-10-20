@@ -3,18 +3,13 @@ var computerScore = 0;
 var playerChoice;
 var computerChoice;
 
-for (let i = 0; i < 5; i++){
-    playerChoice = getPlayerChoice();
-    computerChoice = getComputerChoice();
-
-    checkScore();
-}
-
+playerChoice = getPlayerChoice();
+computerChoice = getComputerChoice();
+checkScore();
 checkWinner();
 
 function getPlayerChoice() {
-    let playerMove = prompt("Rock, Paper, or Scissors?").toLowerCase().trim();
-    
+    // let playerMove = prompt("Rock, Paper, or Scissors?").toLowerCase().trim();
     return playerMove[0].toUpperCase() + playerMove.slice(1);   
 }
 
@@ -75,3 +70,14 @@ function checkWinner() {
         console.log(`Computer wins with ${computerScore} points! Player loses with ${playerScore} points!`);
     }
 }
+
+/*
+
+for (let i = 0; i < 5; i++){
+    playerChoice = getPlayerChoice();
+    computerChoice = getComputerChoice();
+
+    checkScore();
+}
+
+*/
