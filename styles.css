@@ -1,12 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
-#header-container {
+* {
+    margin: unset;
     font-family: 'Amatic SC';
+}
+
+#header-container {
+    padding: 2.5em;
     display: flex;
-    gap: 0.5em;
     justify-content: center;
     align-items: center;
-    color: white;
+    gap: 0.5em;
     background-color: #303030;
-    margin: unset;
+    color: white;
+}
+
+#rules-container {
+    padding: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+    color: white;
+}
+
+.rules-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+    font-size: 0.45em;
+}
+
+#rules-container img {
+    width: 25%
+}
+
+#body-container {
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    background-color: #252525 ;
+}
+
+#body-container button {
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 1.5em;
+    color: white;
+    background-color: #303030 ;
+    border-radius: 35%;
+    border: none;
+}
+
+button h1 {
+    font-size: 2.5em;
+}
+
+button img {
+    width: 45%;
 }

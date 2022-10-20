@@ -10,9 +10,39 @@
   </head>
   <body>
     <div id="header-container">
-      <h1 id="header-rock">rock</h1>
-      <h1 id="header-paper">paper</h1>
-      <h1 id="header-scissors">scissors</h1>
+      <h1 class="header-text" id="header-rock">rock</h1>
+      <h1 class="header-text" id="header-paper">paper</h1>
+      <h1 class="header-text" id="header-scissors">scissors</h1>
+    </div>
+
+    <div id="rules-container">
+      <div class="rules-card">
+        <img src="images/black-hole.png" />
+        <h1>Black Hole beats Atom</h1>
+      </div>
+      <div class="rules-card">
+        <img src="images/orbit.png" />
+        <h1>Star System beats Black Hole</h1>
+      </div>
+      <div class="rules-card">
+        <img src="./images/atom.png" />
+        <h1>Atom beats Solar System</h1>
+      </div>
+    </div>
+
+    <div id="body-container">
+      <button id="button-rock">
+        <img src="images/black-hole.png" />
+        <h1>Black Hole</h1>
+      </button>
+      <button id="button-paper">
+        <img src="images/orbit.png" />
+        <h1>Star System</h1>
+      </button>
+      <button id="button-scissors">
+        <img src="./images/atom.png" />
+        <h1>Atom</h1>
+      </button>
     </div>
     <script src="script.js" async defer></script>
   </body>
