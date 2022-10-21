@@ -1,11 +1,15 @@
 // Interface Code
+const images = document.querySelectorAll('img');
 
-
-
-
-
-
-
+images.forEach((img) => {
+    img.addEventListener('mouseover', () => {
+        img.classList.add('rotate');
+    })
+    
+    img.addEventListener('mouseout', () => {
+        img.classList.toggle('rotatePause');
+    })
+})
 
 
 

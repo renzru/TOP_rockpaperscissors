@@ -43,9 +43,22 @@
     font-size: 0.45em;
 }
 
+/*
+TODO: 
+Add rotation class in JS so it can be toggled on hover
+*/
+
 .rules-card img {
     width: 15%;
-    animation: rotation 2s infinite linear;
+}
+
+.rotate {
+    animation-play-state: running;
+    animation: rotation 1.25s infinite ease-in-out;
+}
+
+.rotatePause {
+    animation-play-state: paused;
 }
 
 @keyframes rotation {
@@ -58,6 +71,19 @@
   }
 
   /*
+  .rotate {
+    animation: rotation 1.25s infinite ease-in-out;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
 .rules-card img, .rules-card h1 {
     transition: .2s ease-in-out 0s;
 }
@@ -73,7 +99,7 @@
 */
 
 #body-container {
-    padding: 5em;
+    padding: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,6 +119,12 @@
     background-color: #303030 ;
     border-radius: 20em;
     border: none;
+    transition: .2s ease-in-out 0s;
+}
+
+button:hover {
+    margin: 0 5em;
+    transform: scale(1.5);
 }
 
 button h1 {
