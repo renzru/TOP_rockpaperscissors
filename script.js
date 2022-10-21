@@ -14,22 +14,6 @@ images.forEach((img) => {
     })
 })
 
-// i just copypasted this jitter effect idk how this works
-$(function(){
-    var $jittery = $('.jittery'),
-        aText    = $jittery.text().split(''),
-        letters = '';
-    
-    for(var i = 0; i < aText.length; i++){
-      letters += '<span>'+aText[i]+'</span>';
-    }
-    
-    $jittery.empty().append(letters);
-    
-    $.each($('span', $jittery), function(i){
-      $(this).css('animation-delay', '-'+i+'70ms');
-    });
-  });
 
 // Code for Rock Paper Scissors
 var playerScore = 0;
@@ -71,6 +55,10 @@ function getComputerChoice() {
     return moveArray[moveRandom];
 }
 
+const scoreContainer = document.querySelector('#score-container');
+const playerScoreWrapper = document.querySelector('#playerDisplay');
+const computerScoreWrapper = document.querySelector('#computerDisplay');
+
 function checkScore() {
 
     if (roundCounter == 5) {
@@ -85,6 +73,8 @@ function checkScore() {
         console.log(`It's a tie! Both played ${playerChoice}`);
         playerScore++;
         computerScore++;
+        playerScoreWrapper.textContent = `${playerScore}`;
+        computerScoreWrapper.textContent = `${computerScore}`;
         return;
     }
 
@@ -92,6 +82,7 @@ function checkScore() {
         if (computerChoice == "Scissors") {
             console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
             playerScore++;
+            playerScoreWrapper.textContent = `${playerScore}`;
             return;
         }
     }
@@ -100,6 +91,7 @@ function checkScore() {
         if (computerChoice == "Rock") {
             console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
             playerScore++;
+            playerScoreWrapper.textContent = `${playerScore}`;
             return;
         }
     }
@@ -108,24 +100,32 @@ function checkScore() {
         if (computerChoice == "Paper") {
             console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
             playerScore++;
+            playerScoreWrapper.textContent = `${playerScore}`;
             return;
         }
     }
         console.log(`Player Loses! ${computerChoice} beats ${playerChoice}`);
         computerScore++;
+        computerScoreWrapper.textContent = `${computerScore}`;
 }
 
+
+
 function checkWinner() {
+
+    const tieScoreDisplay = document.createTextNode(`Tie!`);
+    const playerScoreDisplay = document.createTextNode(`Player Wins!`);
+    const computerScoreDisplay = document.createTextNode(`Computer Wins!`);
     
     if (playerScore == computerScore) {
-        console.log(`Tie with ${playerScore} points!`);
+        scoreContainer.appendChild(tieScoreDisplay);
     }
 
     else if (playerScore > computerScore) {
-        console.log(`Player wins with ${playerScore} points! Computer loses with ${computerScore} points!`);
+        scoreContainer.appendChild(playerScoreDisplay);
     }
 
     else {
-        console.log(`Computer wins with ${computerScore} points! Player loses with ${playerScore} points!`);
+        scoreContainer.appendChild(computerScoreDisplay);
     }
 }
