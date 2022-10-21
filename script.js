@@ -15,22 +15,37 @@ images.forEach((img) => {
 })
 
 // Code for Rock Paper Scissors
-
-
 var playerScore = 0;
 var computerScore = 0;
+var roundCounter = 0;
 var playerChoice;
 var computerChoice;
 
-playerChoice = getPlayerChoice();
-computerChoice = getComputerChoice();
-checkScore();
-checkWinner();
 
-function getPlayerChoice() {
-    // let playerMove = prompt("Rock, Paper, or Scissors?").toLowerCase().trim();
-    return playerMove[0].toUpperCase() + playerMove.slice(1);   
-}
+const buttons = document.querySelectorAll('#body-container button');
+const rockButton = document.querySelector('#button-rock');
+const paperButton = document.querySelector('#button-paper');
+const scissorsButton = document.querySelector('#button-scissors');
+
+rockButton.addEventListener('click', function moveRock() {
+    playerChoice = "Rock";
+})
+
+paperButton.addEventListener('click', function movePaper() {
+    playerChoice = "Paper";
+})
+
+scissorsButton.addEventListener('click', function moveScissors() {
+    playerChoice = "Scissors";
+})
+
+buttons.forEach((button) => {
+    button.addEventListener('click', function buttonScore() {
+        computerChoice = getComputerChoice();
+        roundCounter++;
+        checkScore();
+    });
+})
 
 function getComputerChoice() {
     let moveArray = ["Rock", "Paper", "Scissors"];
@@ -40,6 +55,14 @@ function getComputerChoice() {
 }
 
 function checkScore() {
+
+    if (roundCounter == 5) {
+        checkWinner();
+    }
+
+    if (roundCounter > 4) {
+        return;
+    }
 
     if (playerChoice == computerChoice){
         console.log(`It's a tie! Both played ${playerChoice}`);
@@ -89,14 +112,3 @@ function checkWinner() {
         console.log(`Computer wins with ${computerScore} points! Player loses with ${playerScore} points!`);
     }
 }
-
-/*
-
-for (let i = 0; i < 5; i++){
-    playerChoice = getPlayerChoice();
-    computerChoice = getComputerChoice();
-
-    checkScore();
-}
-
-*/
