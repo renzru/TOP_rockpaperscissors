@@ -66,6 +66,7 @@ header p {
     min-height: 20em;
     color: white;
     background-color: var(--maincolor) ;
+    border: none;
     border-radius: 20em;
     transition: all .25s ease-in-out 0s;
 }
@@ -97,17 +98,9 @@ Animations
     font-size: 2.5em;
 }
 
-button:not(:hover) {
-    border: none;
-}
-
-button:hover {
+#body > *:hover {
     margin: 0 5em;
     border: 2.5px dashed #505050 ;
-    transform: scale(1.25);
-}
-
-#body > *:hover {
     background-color: white;
     color: var(--maincolor);
     transform: scale(0.85);

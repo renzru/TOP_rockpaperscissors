@@ -27,6 +27,11 @@ function computerMove() {
     return moveArray[moveRandom];
 }
 
+function countRound() {
+    roundCounter++;
+    
+}
+
 
 
 
