@@ -1,5 +1,4 @@
 // Interface Code
-
 const images = document.querySelectorAll('img');
 
 images.forEach((img) => {
@@ -14,7 +13,6 @@ images.forEach((img) => {
     })
 })
 
-
 // Code for Rock Paper Scissors
 var playerScore = 0;
 var computerScore = 0;
@@ -22,7 +20,24 @@ var roundCounter = 0;
 var playerChoice;
 var computerChoice;
 
+function computerMove() {
+    let moveArray = ["Black Hole", "Star System", "Atom"];
+    let moveRandom = Math.floor(Math.random()*moveArray.length);
 
+    return moveArray[moveRandom];
+}
+
+
+
+
+
+
+
+
+
+
+
+/* OLD CODE
 const buttons = document.querySelectorAll('#body-container button');
 const rockButton = document.querySelector('#button-rock');
 const paperButton = document.querySelector('#button-paper');
@@ -59,13 +74,17 @@ const scoreContainer = document.querySelector('#score-container');
 const playerScoreWrapper = document.querySelector('#playerDisplay');
 const computerScoreWrapper = document.querySelector('#computerDisplay');
 
+const tiemovesContainer = document.getElementById('tie-moves');
+const playermovesContainer = document.getElementById('player-moves');
+const computermovesContainer = document.getElementById('computer-moves');
+
 function checkScore() {
 
     if (roundCounter == 5) {
         checkWinner();
     }
 
-    if (roundCounter > 4) {
+    if (roundCounter > 5) {
         return;
     }
 
@@ -73,6 +92,7 @@ function checkScore() {
         console.log(`It's a tie! Both played ${playerChoice}`);
         playerScore++;
         computerScore++;
+        tiemovesContainer.appendChild(blackholeDisplay);
         playerScoreWrapper.textContent = `${playerScore}`;
         computerScoreWrapper.textContent = `${computerScore}`;
         return;
@@ -91,6 +111,10 @@ function checkScore() {
         if (computerChoice == "Rock") {
             console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
             playerScore++;
+            playermovesContainer.removeChild(playermovesContainer.lastElementChild);
+            computermovesContainer.removeChild(computermovesContainer.lastElementChild);
+            playermovesContainer.appendChild(starsystemDisplay);
+            computermovesContainer.appendChild(blackholeDisplay );
             playerScoreWrapper.textContent = `${playerScore}`;
             return;
         }
@@ -100,6 +124,10 @@ function checkScore() {
         if (computerChoice == "Paper") {
             console.log(`Player Wins! ${playerChoice} beats ${computerChoice}`);
             playerScore++;
+            playermovesContainer.removeChild(playermovesContainer.lastElementChild);
+            computermovesContainer.removeChild(computermovesContainer.lastElementChild);
+            playermovesContainer.appendChild(atomDisplay);
+            computermovesContainer.appendChild(starsystemDisplay);
             playerScoreWrapper.textContent = `${playerScore}`;
             return;
         }
@@ -108,8 +136,6 @@ function checkScore() {
         computerScore++;
         computerScoreWrapper.textContent = `${computerScore}`;
 }
-
-
 
 function checkWinner() {
 
@@ -126,6 +152,7 @@ function checkWinner() {
     }
 
     else {
-        scoreContainer.appendChild(computerScoreDisplay);
+        computerScoreDisplay.appendChild(computerScoreDisplay);
     }
 }
+*/

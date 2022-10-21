@@ -8,55 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <header>
+    <div>
+      <h1 class="header-text">Black Holes,</h1>
+      <h1 class="header-text">Star Systems,</h1>
+      <h1 class="header-text">+ Atoms!</h1>
+    </div>
+    <div>
+      <p>not scientifically accurate</p>
+    </div>
+  </header>
   <body>
-    <div id="header-container">
-      <div class="header-card">
-        <h1 class="header-text">Black Holes,</h1>
-      </div>
-      <div class="header-card">
-        <h1 class="header-text">Star Systems,</h1>
-      </div>
-      <div class="header-card">
-        <h1 class="header-text">+ Atoms!</h1>
-      </div>
-    </div>
-
-    <div id="rules-container">
-      <div class="rules-card">
-        <img id="rules-id1" src="images/black-hole.png" />
-        <h1>Black Hole beats Atom</h1>
-      </div>
-      <div class="rules-card">
-        <img id="rules-id2" src="images/orbit.png" />
-        <h1>Star System beats Black Hole</h1>
-      </div>
-      <div class="rules-card">
-        <img id="rules-id3" src="./images/atom.png" />
-        <h1>Atom beats Solar System</h1>
-      </div>
-    </div>
-
-    <div id="body-container">
-      <button id="button-rock">
+    <div id="body">
+      <button id="button-bh">
         <img src="images/black-hole.png" />
         <h1>Black Hole</h1>
       </button>
-      <button id="button-paper">
+      <button id="button-ss">
         <img src="images/orbit.png" />
         <h1>Star System</h1>
       </button>
-      <button id="button-scissors">
+      <button id="button-at">
         <img src="./images/atom.png" />
         <h1>Atom</h1>
       </button>
     </div>
 
-    <div id="score-container">
-      <div class="player-score">
-        <h1>Player: <span id="playerDisplay">0</span></h1>
+    <div id="movediv">
+      <div class="moves">
+        <h1>Your Move:</h1>
       </div>
-      <div class="computer-score">
-        <h1>Computer: <span id="computerDisplay">0</span></h1>
+      <div class="moves">
+        <h1>Enemy Move:</h1>
       </div>
     </div>
 
