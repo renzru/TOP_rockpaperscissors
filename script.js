@@ -1,6 +1,6 @@
 // Interface Code
 
-const images = document.querySelectorAll('button img');
+const images = document.querySelectorAll('img');
 
 images.forEach((img) => {
     img.addEventListener('mouseover', () => {
@@ -13,13 +13,6 @@ images.forEach((img) => {
         }, 1750);
     })
 })
-
-
-
-
-
-
-
 
 // Code for Rock Paper Scissors
 
