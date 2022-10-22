@@ -1,4 +1,4 @@
-// Interface Code
+// Interface Animations
 const images = document.querySelectorAll('img');
 
 images.forEach((img) => {
@@ -13,7 +13,7 @@ images.forEach((img) => {
     })
 })
 
-// Code for Rock Paper Scissors
+// Game
 var playerScore = 0;
 var computerScore = 0;
 var roundCounter = 0;
