@@ -5,6 +5,11 @@ const battleScore = document.querySelectorAll('.battle-score');
 const displayIcon = document.querySelectorAll('.moves-display__output img');
 const displayBox = document.querySelectorAll('.moves-display__output');
 const moveButton = document.querySelectorAll('.game-buttons__move');
+const startModal = document.querySelector('.start-modal');
+
+document.addEventListener('DOMContentLoaded', startModal.showModal());
+
+startModal.hide();
 
 let playerScore = 0;
 let enemyScore = 0;
@@ -41,59 +46,61 @@ function enemyPlay() {
 const enemyDamage = new Audio('./audio/enemyaudio--damaged.wav');
 const playerDamage = new Audio('./audio/playeraudio--damaged.wav');
 const battleTie = new Audio('./audio/battleaudio--tie.wav');
+const battleWin = new Audio('./audio/battleaudio--win');
+const BattleLose = new Audio ('./audio/battleaudio--lose');
 
 function checkScore(playerMove, enemyMove) {
     switch (true) {
         case (playerMove == enemyMove):
+            battleTie.play();
             battleText.innerHTML = `Woah! Both unleashed ${playerMove}s, so it's a Tie!`;
             displayBox[0].classList.add('highlight--tie');
             displayBox[1].classList.add('highlight--tie');
             battleText.classList.add('text--grow');
-            battleTie.play();
             playerScore++;
             enemyScore++;
             break;  
         case (playerMove == "Black Hole" && enemyMove == "Atom"):
+            enemyDamage.play();
             battleText.innerHTML = "Your Black Hole spaghettifies the enemy Atom!";
             displayBox[1].classList.add('highlight--damage');
-            enemyDamage.play();
             playerScore++;
             break;
         case (playerMove == "Star System" && enemyMove == "Black Hole"):
+            enemyDamage.play();
             battleText.innerHTML = "Your Star System breaks physics and evaporates the enemy Black Hole!";
             displayBox[1].classList.add('highlight--damage');
-            enemyDamage.play();
             playerScore++;
             break;
             
         case (playerMove == "Atom" && enemyMove == "Star System"):
+            enemyDamage.play();
             battleText.innerHTML = "Your Atom causes nuclear devastation on the enemy Star System!";
             displayBox[1].classList.add('highlight--damage');
-            enemyDamage.play();
             playerScore++;
             break;
 
         case (enemyMove == "Black Hole" && playerMove == "Atom"):
+            playerDamage.play();
             battleText.innerHTML = "Enemy Black Hole consumes your Atom into its singularity!";
             displayBox[0].classList.add('highlight--damage');
             battleText.classList.add('text--shake');
-            playerDamage.play();
             enemyScore++;
             break;
 
         case (enemyMove == "Star System" && playerMove == "Black Hole"):;
+            playerDamage.play();
             battleText.innerHTML = "Enemy Star System's Civilization finds a way to defeat your Black Hole!";
             displayBox[0].classList.add('highlight--damage');
             battleText.classList.add('text--shake');
-            playerDamage.play();
             enemyScore++;
             break;
                 
         case (enemyMove == "Atom" && playerMove == "Star System"):
+            playerDamage.play();
             battleText.innerHTML = "Enemy Atom causes nuclear devastation on YOUR Star System!";
             displayBox[0].classList.add('highlight--damage');
             battleText.classList.add('text--shake');
-            playerDamage.play();
             enemyScore++;
             break;
     }

@@ -3,12 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rock Paper Scissors</title>
+    <title>Black Holes, Star Systems, + Atoms!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
 
   </head>
+
+  <div class="start-modal">
+    <div class="start-modal__header">
+      <h1>How to Play</h1>
+      <p>This is played exactly like the classic Rock, Paper, Scissors!</p>
+      <img src="images/black-hole.png" />
+    <div class="start-modal__infotext"> 
+      <img src="images/modal__button--left.png" />
+      <p>Black Holes beat Atoms!</p>
+      <img src="images/modal__button--right.png" />
+    </div>
+    </div>
+  </div>
 
   <header class="game-header">
     <div class="game-header__textarea">
@@ -16,35 +29,36 @@
       <h1>Star Systems,</h1>
       <h1>+ Atoms!</h1>
     </div>
+
     <div class="game-header__textarea">
       <p>not scientifically accurate</p>
     </div>
   </header>
 
-    <div class="moves-display">
-      <div class="moves-display__output">
-        <h1>Your Move:</h1>
-        <img class="rotate--load" src="images/load.png">
-      </div>
-
-      <div class="output">
-        <div class="output__details">
-          <h1>Make your Move!</h1>
-          <p>Combat</p>
-          <div class="output__details--scores">
-            <h2>Player Score: <span class="battle-score">0</span></h2>
-            <h2>Enemy Score: <span class="battle-score">0</span></h2>
+    <body>
+      <div class="moves-display">
+        <div class="moves-display__output">
+          <h1>Your Move:</h1>
+          <img class="rotate--load" src="images/load.png">
+        </div>
+  
+        <div class="output">
+          <div class="output__details">
+            <h1>Make your Move!</h1>
+            <p>Combat</p>
+            <div class="output__details--scores">
+              <h2>Player Score: <span class="battle-score">0</span></h2>
+              <h2>Enemy Score: <span class="battle-score">0</span></h2>
+            </div>
           </div>
+        </div>
+  
+        <div class="moves-display__output">
+          <h1>Enemy Move:</h1>
+          <img class="rotate--load" src="images/load.png">
         </div>
       </div>
 
-      <div class="moves-display__output">
-        <h1>Enemy Move:</h1>
-        <img class="rotate--load" src="images/load.png">
-      </div>
-    </div>
-
-    <body>
       <div class="game-buttons">
         <button class="game-buttons__move">
           <img src="images/black-hole.png" />
