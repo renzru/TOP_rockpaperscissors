@@ -38,6 +38,10 @@ function enemyPlay() {
     return enemyMove;
 }
 
+const enemyDamage = new Audio('./audio/enemyaudio--damaged.wav');
+const playerDamage = new Audio('./audio/playeraudio--damaged.wav');
+const battleTie = new Audio('./audio/battleaudio--tie.wav');
+
 function checkScore(playerMove, enemyMove) {
     switch (true) {
         case (playerMove == enemyMove):
@@ -45,23 +49,27 @@ function checkScore(playerMove, enemyMove) {
             displayBox[0].classList.add('highlight--tie');
             displayBox[1].classList.add('highlight--tie');
             battleText.classList.add('text--grow');
+            battleTie.play();
             playerScore++;
             enemyScore++;
             break;  
         case (playerMove == "Black Hole" && enemyMove == "Atom"):
             battleText.innerHTML = "Your Black Hole spaghettifies the enemy Atom!";
             displayBox[1].classList.add('highlight--damage');
+            enemyDamage.play();
             playerScore++;
             break;
         case (playerMove == "Star System" && enemyMove == "Black Hole"):
             battleText.innerHTML = "Your Star System breaks physics and evaporates the enemy Black Hole!";
             displayBox[1].classList.add('highlight--damage');
+            enemyDamage.play();
             playerScore++;
             break;
             
         case (playerMove == "Atom" && enemyMove == "Star System"):
             battleText.innerHTML = "Your Atom causes nuclear devastation on the enemy Star System!";
             displayBox[1].classList.add('highlight--damage');
+            enemyDamage.play();
             playerScore++;
             break;
 
@@ -69,6 +77,7 @@ function checkScore(playerMove, enemyMove) {
             battleText.innerHTML = "Enemy Black Hole consumes your Atom into its singularity!";
             displayBox[0].classList.add('highlight--damage');
             battleText.classList.add('text--shake');
+            playerDamage.play();
             enemyScore++;
             break;
 
@@ -76,6 +85,7 @@ function checkScore(playerMove, enemyMove) {
             battleText.innerHTML = "Enemy Star System's Civilization finds a way to defeat your Black Hole!";
             displayBox[0].classList.add('highlight--damage');
             battleText.classList.add('text--shake');
+            playerDamage.play();
             enemyScore++;
             break;
                 
@@ -83,6 +93,7 @@ function checkScore(playerMove, enemyMove) {
             battleText.innerHTML = "Enemy Atom causes nuclear devastation on YOUR Star System!";
             displayBox[0].classList.add('highlight--damage');
             battleText.classList.add('text--shake');
+            playerDamage.play();
             enemyScore++;
             break;
     }
