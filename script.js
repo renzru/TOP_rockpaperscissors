@@ -14,11 +14,12 @@ images.forEach((img) => {
 })
 
 // Game
-var playerScore = 0;
-var computerScore = 0;
-var roundCounter = 0;
-var playerChoice;
-var computerChoice;
+let playerScore = 0;
+let computerScore = 0;
+let round = 0;
+
+let computerChoice;
+let playerChoice;
 
 function computerMove() {
     let moveArray = ["Black Hole", "Star System", "Atom"];
@@ -27,9 +28,12 @@ function computerMove() {
     return moveArray[moveRandom];
 }
 
-function countRound() {
-    roundCounter++;
-    
+const displayDetails = document.querySelector('.output--details h1'); 
+
+
+function roundCount() {
+    round++;
+    displayDetails.innerHTML = `Round ${round}`;
 }
 
 
