@@ -6,15 +6,51 @@ const displayIcon = document.querySelectorAll('.moves-display__output img');
 const displayBox = document.querySelectorAll('.moves-display__output');
 const moveButton = document.querySelectorAll('.game-buttons__move');
 const startModal = document.querySelector('.start-modal');
+const restartModal = document.querySelector('.restart-modal');
+const restartButton = document.querySelector('.restart-modal__button');
+const restartScore = document.querySelector('.restart-modal__score')
+
+const enemyDamage = new Audio('./audio/enemyaudio--damaged.wav');
+const playerDamage = new Audio('./audio/playeraudio--damaged.wav');
+const battleTie = new Audio('./audio/battleaudio--tie.wav');
+const battleTie2 = new Audio('./audio/battleaudio--tie.wav');
+const battleWin = new Audio('./audio/battleaudio--win.wav');
+const battleLose = new Audio ('./audio/battleaudio--lose.wav');
 
 let playerScore = 0;
 let enemyScore = 0;
+let roundTotal = 25;
 let round = 0;
 let moves = ["Black Hole", "Star System", "Atom"];
 
 function roundCount() {
     round++;
     roundText.innerHTML = `Round ${round}`;
+    if (round > roundTotal-1){
+        battleText.innerHTML = `${winnerCheck()}`;
+        moveButton.forEach((button), () => {
+            button.removeEventListener('click', e());
+        })
+        
+        return;
+    }
+}
+
+function winnerCheck() {
+    switch (true) {
+        case (playerScore == enemyScore): 
+            battleTie2.play();
+            return "It's a Tie!";
+
+        case (playerScore > enemyScore): 
+            battleWin.play();
+            return "Player Wins!";
+        
+        case (playerScore < enemyScore): 
+            battleLose.play();
+            return "Enemy Wins!";
+    }
+    
 }
 
 function updateScore() {
@@ -38,12 +74,6 @@ function enemyPlay() {
 
     return enemyMove;
 }
-
-const enemyDamage = new Audio('./audio/enemyaudio--damaged.wav');
-const playerDamage = new Audio('./audio/playeraudio--damaged.wav');
-const battleTie = new Audio('./audio/battleaudio--tie.wav');
-const battleWin = new Audio('./audio/battleaudio--win');
-const BattleLose = new Audio ('./audio/battleaudio--lose');
 
 function checkScore(playerMove, enemyMove) {
     playerDamage.currentTime = 0;
@@ -112,7 +142,7 @@ function roundPlay() {
     let enemyMove;
 
     for (let i = 0; i < 3; i++){
-        moveButton[i].addEventListener('click', () => {
+        moveButton[i].addEventListener('click', function e() {
             playerMove = moves[i];
             switch (true) {
                 case (playerMove == "Black Hole"):
@@ -125,10 +155,17 @@ function roundPlay() {
                     displayIcon[0].src = './images/atom.png';
                 }
 
+            if (round >= roundTotal - 1){
+                restartModal.classList.remove('hide');
+                restartScore.innerHTML = winnerCheck();
+                return;
+            }
+            
             enemyMove = enemyPlay();
             checkScore(playerMove, enemyMove);
-            roundCount();
             updateScore();
+            roundCount();
+            
         });
     }
 }
@@ -137,8 +174,8 @@ roundPlay();
 
 // Interface Animations
 const startmodalClose = document.querySelector('.start-modal--closebutton');
-
 startmodalClose.addEventListener('click', () => startModal.classList.add('hide'));
+restartButton.addEventListener('click', () => location.reload());
 
 const images = document.querySelectorAll('.game-buttons img');
 
