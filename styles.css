@@ -80,6 +80,7 @@
 .moves-display__output img {
     width: 5em;
     padding: 1.25em;
+    filter: brightness(0.3);
 }
 
 .output--details {

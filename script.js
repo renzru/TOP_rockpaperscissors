@@ -1,3 +1,34 @@
+// Game
+const displayText = document.querySelector('.output--details h1'); 
+const displayIcon = document.querySelectorAll('.moves-display__output img');
+
+let playerScore = 0;
+let enemyScore = 0;
+let round = 0;
+
+function roundCount() {
+    round++;
+    displayText.innerHTML = `Round ${round}`;
+}
+
+function enemyPlay() {
+    let moves = ["Black Hole", "Star System", "Atom"];
+    let enemyMove = moves[Math.floor(Math.random()*moves.length)];
+
+    switch (true) {
+        case (enemyMove == "Black Hole"):
+            displayIcon[1].src = './images/black-hole.png'; 
+            break;
+        case (enemyMove == "Star System"):
+            displayIcon[1].src = './images/orbit.png'; 
+            break;
+        case (enemyMove == "Atom"):
+            displayIcon[1].src = './images/atom.png';
+    }
+
+    return enemyMove;
+}
+
 // Interface Animations
 const images = document.querySelectorAll('img');
 
@@ -13,28 +44,6 @@ images.forEach((img) => {
     })
 })
 
-// Game
-let playerScore = 0;
-let computerScore = 0;
-let round = 0;
-
-let computerChoice;
-let playerChoice;
-
-function computerMove() {
-    let moveArray = ["Black Hole", "Star System", "Atom"];
-    let moveRandom = Math.floor(Math.random()*moveArray.length);
-
-    return moveArray[moveRandom];
-}
-
-const displayDetails = document.querySelector('.output--details h1'); 
-
-
-function roundCount() {
-    round++;
-    displayDetails.innerHTML = `Round ${round}`;
-}
 
 
 
