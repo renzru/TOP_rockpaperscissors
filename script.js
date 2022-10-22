@@ -7,10 +7,6 @@ const displayBox = document.querySelectorAll('.moves-display__output');
 const moveButton = document.querySelectorAll('.game-buttons__move');
 const startModal = document.querySelector('.start-modal');
 
-document.addEventListener('DOMContentLoaded', startModal.showModal());
-
-startModal.hide();
-
 let playerScore = 0;
 let enemyScore = 0;
 let round = 0;
@@ -50,6 +46,10 @@ const battleWin = new Audio('./audio/battleaudio--win');
 const BattleLose = new Audio ('./audio/battleaudio--lose');
 
 function checkScore(playerMove, enemyMove) {
+    playerDamage.currentTime = 0;
+    enemyDamage.currentTime = 0;
+    battleTie.currentTime = 0;
+    
     switch (true) {
         case (playerMove == enemyMove):
             battleTie.play();
@@ -67,6 +67,7 @@ function checkScore(playerMove, enemyMove) {
             playerScore++;
             break;
         case (playerMove == "Star System" && enemyMove == "Black Hole"):
+            
             enemyDamage.play();
             battleText.innerHTML = "Your Star System breaks physics and evaporates the enemy Black Hole!";
             displayBox[1].classList.add('highlight--damage');
@@ -135,6 +136,10 @@ function roundPlay() {
 roundPlay();
 
 // Interface Animations
+const startmodalClose = document.querySelector('.start-modal--closebutton');
+
+startmodalClose.addEventListener('click', () => startModal.classList.add('hide'));
+
 const images = document.querySelectorAll('.game-buttons img');
 
 for (let i = 0; i < 3; i++){
