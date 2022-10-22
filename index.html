@@ -8,37 +8,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <header>
-    <div>
-      <h1 class="header-text">Black Holes,</h1>
-      <h1 class="header-text">Star Systems,</h1>
-      <h1 class="header-text">+ Atoms!</h1>
+
+  <header class="game-header">
+    <div class="game-header__textarea">
+      <h1>Black Holes,</h1>
+      <h1>Star Systems,</h1>
+      <h1>+ Atoms!</h1>
     </div>
-    <div>
+    <div class="game-header__textarea">
       <p>not scientifically accurate</p>
     </div>
   </header>
+
   <body>
-    <div id="body">
-      <button id="button-bh">
+    <div class="game-buttons">
+      <button class="game-buttons__move">
         <img src="images/black-hole.png" />
         <h1>Black Hole</h1>
       </button>
-      <button id="button-ss">
+      <button class="game-buttons__move"">
         <img src="images/orbit.png" />
         <h1>Star System</h1>
       </button>
-      <button id="button-at">
+      <button class="game-buttons__move">
         <img src="./images/atom.png" />
         <h1>Atom</h1>
       </button>
     </div>
 
-    <div id="movediv">
-      <div class="moves">
+    <div class="moves-display">
+      <div class="moves-display__output">
         <h1>Your Move:</h1>
       </div>
-      <div class="moves">
+      <div class="moves-display__output">
         <h1>Enemy Move:</h1>
       </div>
     </div>
