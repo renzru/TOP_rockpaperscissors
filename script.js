@@ -1,6 +1,7 @@
 // Game
 const displayText = document.querySelector('.output--details h1'); 
 const displayIcon = document.querySelectorAll('.moves-display__output img');
+const moveButton = document.querySelectorAll('.game-buttons__move');
 
 let playerScore = 0;
 let enemyScore = 0;
@@ -32,22 +33,15 @@ function enemyPlay() {
 // Interface Animations
 const images = document.querySelectorAll('img');
 
-images.forEach((img) => {
-    img.addEventListener('mouseover', () => {
-        img.classList.add('rotate');
+for (let i = 0; i < 3; i++){
+    moveButton[i].addEventListener('mouseover', () => {
+        images[i].classList.add('rotate');
     });
 
-    img.addEventListener('mouseout', () => {
-        setTimeout(() => {
-            img.classList.remove('rotate')
-        }, 1750);
+    images[i].addEventListener('animationend', () => {
+        images[i].classList.remove('rotate');
     })
-})
-
-
-
-
-
+}
 
 
 

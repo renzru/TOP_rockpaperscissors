@@ -134,15 +134,10 @@
     animation: rotation 1.25s 1 ease-in-out;
 }
 
-.rotate--loading {
+.rotate--load {
     animation: rotation 1s infinite ease-in-out;
 }
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
+    to { transform: rotate(360deg); }
   }
