@@ -13,7 +13,7 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <li> How to animate elements in CSS using transform and keyframes <br>
 <li> How to organize elements and classes using BEM & OOCSS. <br>
 <li> How to create modals and popup dialogs. <br>
-<li> How Events and rrow functions work. <br>
+<li> How Events and Arrow functions work. <br>
 <li> How to use Git for version control. <br>
 <li> DON'T USE GIT PUSH -F! <br> <br>
 
