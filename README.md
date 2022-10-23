@@ -1,6 +1,6 @@
 # The Odin Project - Rock Paper Scissors Site
 
-Implementation of a function Rock Paper Scissors Game on a Website <br>
+Implementation of a Functional Rock Paper Scissors Game on a Webpage <br>
 Lesson Page: https://www.theodinproject.com/lessons/foundations-rock-paper-scissors <br>
 Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <br> ![October-22-2022-690](https://user-images.githubusercontent.com/112093726/197367280-b2b74eb0-648d-4034-a718-1c6d3761ddb1.gif) <br>
