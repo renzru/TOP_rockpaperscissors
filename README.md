@@ -17,7 +17,7 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <li> DON'T USE GIT PUSH -F! <br> <br>
 
 <h1> Credits </h1>
-**Icons:**<br>
+**Icons:** <br>
 Atom Icon: https://www.flaticon.com/free-icon/atomic-energy_100550 <br>
 Star System Icon: https://www.flaticon.com/free-icon/orbital_5524384 <br>
 Black Hole Icon: https://www.flaticon.com/free-icon/black-hole_2032416 <br>
