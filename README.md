@@ -9,11 +9,12 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <li> How to Manipulate the DOM with JavaScript <br>
 <li> The grocery-store tea I drank while making this tasted like hot water. <br>
 <li> DON'T use git push -f because it DELETES stuff! (I had to create this README file for the 2nd time because of this).<br>
+<li> Importance of Giving Credit when Using Resources like Icons and Audio files. <br>
 <li> How to animate Elements in CSS using transform and keyframes <br>
 <li> How to organize Elements and Classes using BEM & OOCSS. <br>
 <li> How Events and Arrow functions work. <br>
 <li> How to use Git for Version Control. <br>
-<li> Importance of Giving Credit when Using Resources like Icons and Audio files. <br>
+<li> How to create Modals and Popup Dialogs. <br>
 <li> DON'T USE GIT PUSH -F! <br> <br>
 
 <h1> Credits </h1> 
