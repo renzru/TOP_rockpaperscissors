@@ -5,7 +5,7 @@ Lesson Page: https://www.theodinproject.com/lessons/foundations-rock-paper-sciss
 Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <br> ![October-22-2022-690](https://user-images.githubusercontent.com/112093726/197367280-b2b74eb0-648d-4034-a718-1c6d3761ddb1.gif) <br>
 
-<h1> What I Learned <h1>
+<h1> What I Learned </h1>
 - How to Create, Remove, and Manipulate Elements and Classes using JavaScript. <br>
 - The grocery-store tea I drank while making this tasted like hot water. <br>
 - DON'T use git push -f because it DELETES stuff! (I had to create this README file for the 2nd time because of this).<br>
@@ -16,7 +16,7 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 - Importance of Giving Credit when Using Resources like Icons and Audio files. <br>
 - DON'T USE GIT PUSH -F! <br> <br>
 
-<h1> CREDITS <h1> <br>
+<h1> CREDITS </h1> <br>
 ICONS: <br>
 Atom Icon: https://www.flaticon.com/free-icon/atomic-energy_100550 <br>
 Star System Icon: https://www.flaticon.com/free-icon/orbital_5524384 <br>
