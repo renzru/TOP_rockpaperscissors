@@ -14,7 +14,7 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <li> How Events and Arrow functions work. <br>
 <li> How to use Git for Version Control. <br>
 <li> Importance of Giving Credit when Using Resources like Icons and Audio files. <br>
-<li> DON'T USE GIT PUSH -F! <br>
+<li> DON'T USE GIT PUSH -F! <br> <br>
 
 <h1> Credits </h1>
 **Icons:** <br>
