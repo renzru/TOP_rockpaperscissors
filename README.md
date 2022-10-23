@@ -16,15 +16,14 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 - Importance of Giving Credit when Using Resources like Icons and Audio files. <br>
 - DON'T USE GIT PUSH -F! <br> <br>
 
-<h1> CREDITS </h1> <br>
-ICONS: <br>
+<h1> Credits </h1> <br>
+Icons: <br>
 Atom Icon: https://www.flaticon.com/free-icon/atomic-energy_100550 <br>
 Star System Icon: https://www.flaticon.com/free-icon/orbital_5524384 <br>
 Black Hole Icon: https://www.flaticon.com/free-icon/black-hole_2032416 <br>
 Loading Icon: https://www.flaticon.com/free-icon/spinning_4865172 <br>
 
-AUDIO FX: <br>
-
+Audio FX: <br>
 Player Damaged: https://freesound.org/people/InspectorJ/sounds/448226/ <br>
 Enemy Damaged: https://freesound.org/people/sweet_trip/sounds/260648/ <br>
 Tie Damage: https://freesound.org/people/Breviceps/sounds/450615/ <br>
