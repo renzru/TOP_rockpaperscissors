@@ -4,7 +4,7 @@ Implementation of a Functional Rock Paper Scissors Game on a Webpage <br>
 Lesson Page: https://www.theodinproject.com/lessons/foundations-rock-paper-scissors <br>
 Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <br> ![October-22-2022-690](https://user-images.githubusercontent.com/112093726/197367280-b2b74eb0-648d-4034-a718-1c6d3761ddb1.gif) <br>
-
+<br>
 <h1> What I Learned </h1>
 <li> How to Create, Remove, and Manipulate Elements and Classes using JavaScript. <br>
 <li> The grocery-store tea I drank while making this tasted like hot water. <br>
@@ -14,7 +14,7 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <li> How Events and Arrow functions work. <br>
 <li> How to use Git for Version Control. <br>
 <li> Importance of Giving Credit when Using Resources like Icons and Audio files. <br>
-<li> DON'T USE GIT PUSH -F! <br> <br>
+<li> DON'T USE GIT PUSH -F! <br>
 
 <h1> Credits </h1>
 **Icons:** <br>
