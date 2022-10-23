@@ -13,7 +13,7 @@ const restartScore = document.querySelector('.restart-modal__score')
 const enemyDamage = new Audio('./audio/enemyaudio--damaged.wav');
 const playerDamage = new Audio('./audio/playeraudio--damaged.wav');
 const battleTie = new Audio('./audio/battleaudio--tie.wav');
-const battleTie2 = new Audio('./audio/battleaudio--tie.wav');
+const battleTie2 = new Audio('./audio/battleaudio--tie2.wav');
 const battleWin = new Audio('./audio/battleaudio--win.wav');
 const battleLose = new Audio ('./audio/battleaudio--lose.wav');
 
