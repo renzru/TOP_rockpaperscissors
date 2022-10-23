@@ -16,7 +16,7 @@ Live Page: https://renzru.github.io/TOP_rockpaperscissors/ <br>
 <li> Importance of Giving Credit when Using Resources like Icons and Audio files. <br>
 <li> DON'T USE GIT PUSH -F! <br> <br>
 
-<h1> Credits </h1>
+<h1> Credits </h1> <br>
 __Icons:__  <br>
 Atom Icon: https://www.flaticon.com/free-icon/atomic-energy_100550 <br>
 Star System Icon: https://www.flaticon.com/free-icon/orbital_5524384 <br>
